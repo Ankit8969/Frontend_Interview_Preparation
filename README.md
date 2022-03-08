@@ -70,7 +70,56 @@ console.log(typeof this.sessionStorage.getItem('Roll'));
 
 
 
+## Prototye inheritance and Prototype chaining
 
+- Writing the code in this way is not efficient.
+
+```
+let obj1 = {
+  fname:"Ankit",
+  lname:"Kumar",
+  fun1:function(){
+    console.log(this.fname + " " + this.lname);
+  }
+}
+
+let obj2 = {
+  home:"Forbesganj",
+  state:"Bihar",
+  fun2:function(){
+    console.log(this.home + " " + this.state);
+  }
+}
+
+obj2.__proto__ = obj1;
+
+let obj3 = {
+  college:"MAKAUT",
+  branch:"Information Technology",
+  fun3:function(){
+    console.log(this.college + " " + this.branch);
+  }
+}
+
+obj3.__proto__ = obj2;
+
+obj3.fun1();
+```
+
+## Function.proptotype
+
+- ***In the code If you write like this then, all the function can use the mybind() method
+```
+Function.prototype.mybind = function (){
+  console.log("ANkit Kumar");
+}
+
+function fun(){
+  console.log("check");
+};
+
+fun.__proto__.mybind()
+```
 
 
 

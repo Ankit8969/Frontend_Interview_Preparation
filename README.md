@@ -125,6 +125,7 @@ fun.__proto__.mybind()
 ## Debouncing
 - It is technique which is used to increase the performance of our webpage
 - ***eg: In searchbar, we want to trigger someting when user scroll***
+- ***Function calls when the time gap b/w to key stroke is more than certan amount of time lik 300ms***
 
 ```
 <body>

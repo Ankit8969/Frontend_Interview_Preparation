@@ -122,10 +122,36 @@ fun.__proto__.mybind()
 ```
 
 
+## Debouncing
+- It is technique which is used to increase the performance of our webpage
+- ***eg: In searchbar, we want to trigger someting when user scroll***
 
+```
+<body>
+  <input type="text" name="search" id="search" onkeyup="betterFunction()" >
+  <script src="index.js"></script>
+</body>
+```
 
+```
+let t = 0;
+function getData(){
+  // It calls the api and getting the api
+  console.log("Counter " + t++);
+}
 
+const debounce = function(fn, delay){
+  let timer ;
+  return function(){
+    clearTimeout(timer);
+    timer = setTimeout(()=>{
+      fn.call(getData);
+    }, delay)
+  }
+}
 
+const betterFunction = debounce(getData, 300);
+```
 
 
 

@@ -125,7 +125,7 @@ fun.__proto__.mybind()
 ## Debouncing
 - It is technique which is used to increase the performance of our webpage
 - ***eg: In searchbar, we want to trigger someting when user scroll***
-- ***Function calls when the time gap b/w to key stroke is more than certan amount of time lik 300ms***
+- ***Function calls when the time gap b/w two key stroke is more than certan amount of time like 300ms***
 
 ```
 <body>
@@ -153,9 +153,9 @@ const debounce = function(fn, delay){
 
 const betterFunction = debounce(getData, 300);
 ```
-
-
-
+## Throatling
+- ***In throatling function call after certain amount of time it doesn't depends on the key stroke***
+- ***Difference b/w two function call more than given timer like 300ms***
 
 
 

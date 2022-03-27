@@ -158,6 +158,8 @@ const betterFunction = debounce(getData, 300);
 - ***Difference b/w two function call more than given timer like 300ms***
 
 
+## Currying in javascript
+***Currying is a process in functional programming in which we can transform a function with multiple arguments into a sequence of nesting functions. It returns a new function that expects the next argument inline.***
 
 
 
